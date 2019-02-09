@@ -1,0 +1,73 @@
+menu.cpu=Processor
+
+##############################################################
+
+mega.name=Arduino/Genuino Mega or Mega 2560
+
+mega.vid.0=0x2341
+mega.pid.0=0x0010
+mega.vid.1=0x2341
+mega.pid.1=0x0042
+mega.vid.2=0x2A03
+mega.pid.2=0x0010
+mega.vid.3=0x2A03
+mega.pid.3=0x0042
+mega.vid.4=0x2341
+mega.pid.4=0x0210
+mega.vid.5=0x2341
+mega.pid.5=0x0242
+
+mega.upload.tool=arduino:avrdude
+mega.upload.maximum_data_size=8192
+
+mega.bootloader.tool=arduino:avrdude
+mega.bootloader.low_fuses=0xFF
+mega.bootloader.unlock_bits=0x3F
+mega.bootloader.lock_bits=0x0F
+
+mega.build.f_cpu=16000000L
+mega.build.core=arduino:arduino
+mega.build.variant=arduino:mega
+# default board may be overridden by the cpu menu
+mega.build.board=AVR_MEGA2560
+
+## Arduino/Genuino Mega w/ ATmega2560 Optiboot
+## -------------------------
+mega.menu.cpu.atmega2560ob=ATmega2560 (Optiboot)
+
+mega.menu.cpu.atmega2560ob.upload.protocol=arduino
+mega.menu.cpu.atmega2560ob.upload.maximum_size=261120
+mega.menu.cpu.atmega2560ob.upload.speed=115200
+
+mega.menu.cpu.atmega2560ob.bootloader.high_fuses=0xD6
+mega.menu.cpu.atmega2560ob.bootloader.extended_fuses=0xFD
+mega.menu.cpu.atmega2560ob.bootloader.file=optiboot8/optiboot_atmega2560.hex
+
+mega.menu.cpu.atmega2560ob.build.mcu=atmega2560
+mega.menu.cpu.atmega2560ob.build.board=AVR_MEGA2560
+
+##############################################################
+
+badio.name=Badio 1284p
+
+badio.upload.tool=arduino:avrdude
+badio.upload.protocol=arduino
+badio.upload.maximum_size=130048
+badio.upload.maximum_data_size=16384
+badio.upload.speed=115200
+
+badio.bootloader.tool=arduino:avrdude
+badio.bootloader.low_fuses=0xF7
+badio.bootloader.high_fuses=0xD6
+badio.bootloader.extended_fuses=0xfd
+badio.bootloader.unlock_bits=0x3f
+badio.bootloader.lock_bits=0x0f
+badio.bootloader.file=optiboot8/optiboot_atmega1284p.hex
+
+badio.build.mcu=atmega1284p
+badio.build.f_cpu=16000000L
+badio.build.board=AVR_ATmega1284
+badio.build.core=arduino:arduino
+badio.build.variant=badio
+
+

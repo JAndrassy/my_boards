@@ -1,0 +1,4 @@
+
+tools.openocd-withbootsize.network_cmd={runtime.tools.arduinoOTA.path}/bin/arduinoOTA
+tools.openocd-withbootsize.upload.network_pattern="{network_cmd}" -address {serial.port} -port 65280 -username arduino -password password -sketch "{build.path}/{build.project_name}.bin" -upload /sketch -b
+

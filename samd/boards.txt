@@ -1,0 +1,33 @@
+
+# Arduino M0 without bootloader
+# ----------------------------
+mzero_no_bl.name=Arduino M0 (no bootloader)
+mzero_no_bl.vid.0=0x2a03
+mzero_no_bl.pid.0=0x004d
+mzero_no_bl.vid.1=0x2a03
+mzero_no_bl.pid.1=0x804d
+mzero_no_bl.vid.2=0x2a03
+mzero_no_bl.pid.2=0x004e
+mzero_no_bl.vid.3=0x2a03
+mzero_no_bl.pid.3=0x804e
+
+mzero_no_bl.upload.tool=arduino:openocd-withbootsize
+mzero_no_bl.bootloader.size = 0
+mzero_no_bl.upload.protocol=cmsis-dap
+mzero_no_bl.upload.maximum_size=262144
+mzero_no_bl.build.mcu=cortex-m0plus
+mzero_no_bl.build.f_cpu=48000000L
+mzero_no_bl.build.usb_product="Arduino M0"
+mzero_no_bl.build.usb_manufacturer="Arduino LLC"
+mzero_no_bl.build.board=SAM_ZERO
+mzero_no_bl.build.core=arduino:arduino
+mzero_no_bl.build.extra_flags=-D__SAMD21G18A__ -mthumb {build.usb_flags}
+mzero_no_bl.build.ldscript=linker_scripts/gcc/flash_without_bootloader.ld
+mzero_no_bl.build.openocdscript=openocd_scripts/arduino_zero.cfg
+mzero_no_bl.build.variant=arduino_mzero
+mzero_no_bl.build.variant_system_lib=
+mzero_no_bl.build.vid=0x2a03
+mzero_no_bl.build.pid=0x804e
+
+
+
