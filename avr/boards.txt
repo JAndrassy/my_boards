@@ -1,8 +1,7 @@
-menu.cpu=Processor
 
 ##############################################################
 
-mega.name=Arduino/Genuino Mega or Mega 2560
+mega.name=Arduino Mega 2560 (Optiboot)
 
 mega.vid.0=0x2341
 mega.pid.0=0x0010
@@ -18,33 +17,24 @@ mega.vid.5=0x2341
 mega.pid.5=0x0242
 
 mega.upload.tool=arduino:avrdude
+mega.upload.protocol=arduino
+mega.upload.maximum_size=261120
 mega.upload.maximum_data_size=8192
+mega.upload.speed=115200
 
 mega.bootloader.tool=arduino:avrdude
 mega.bootloader.low_fuses=0xFF
+mega.bootloader.high_fuses=0xD6
+mega.bootloader.extended_fuses=0xFD
 mega.bootloader.unlock_bits=0x3F
 mega.bootloader.lock_bits=0x0F
+mega.bootloader.file=optiboot8/optiboot_atmega2560.hex
 
+mega.build.mcu=atmega2560
 mega.build.f_cpu=16000000L
+mega.build.board=AVR_MEGA2560
 mega.build.core=arduino:arduino
 mega.build.variant=arduino:mega
-# default board may be overridden by the cpu menu
-mega.build.board=AVR_MEGA2560
-
-## Arduino/Genuino Mega w/ ATmega2560 Optiboot
-## -------------------------
-mega.menu.cpu.atmega2560ob=ATmega2560 (Optiboot)
-
-mega.menu.cpu.atmega2560ob.upload.protocol=arduino
-mega.menu.cpu.atmega2560ob.upload.maximum_size=261120
-mega.menu.cpu.atmega2560ob.upload.speed=115200
-
-mega.menu.cpu.atmega2560ob.bootloader.high_fuses=0xD6
-mega.menu.cpu.atmega2560ob.bootloader.extended_fuses=0xFD
-mega.menu.cpu.atmega2560ob.bootloader.file=optiboot8/optiboot_atmega2560.hex
-
-mega.menu.cpu.atmega2560ob.build.mcu=atmega2560
-mega.menu.cpu.atmega2560ob.build.board=AVR_MEGA2560
 
 ##############################################################
 
