@@ -1,4 +1,0 @@
-
-tools.esptool.cmd=esptool
-tools.esptool.cmd.windows=esptool.exe
-

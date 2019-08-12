@@ -5,7 +5,7 @@ This GitHub repository contains my settings for boards I use for my project and 
 
 ![folders](my_boards.png)
 
-All boards in this repo are only additions to installed 'official' board packages. My files contain only definition of the board in boards.txt, the folder in variants and platform.txt file contains only additional entries. I use Eclipse Arduino plugin named Sloeber for Arduino development. With Sloeber the entries from platform.txt in custom definition are merged with official platform.txt and my entries have priority. With Arduino IDE only some entries are respected.
+All boards in this repo are only additions to installed 'official' board packages. My files contain only definition of the board in boards.txt, the folder in variants and platform.txt file contains only additional entries. I use Eclipse Arduino plugin named Sloeber for Arduino development. With Sloeber the entries from platform.txt in custom definition are merged with official platform.txt and my entries have priority. With Arduino IDE rename the platform.txt from my_boards to platform.local.txt and copy it next to platform.txt in the official board package.
 
 ## Boards
 
@@ -23,14 +23,4 @@ platform.txt contains an entry for remote upload, that is missing in the officia
 
 I use a M0 board without bootloader. The official core doesn't define a SAMD board without bootloader. The variants/arduino_mzero folder is copied from the Arduino SAMD package.
 
-### esp8266
 
-For this to work you must replace in installed official platform.txt `{runtime.platform.path}` to `{build.core.path}/../../`. (Only until next version of the esp8266 package.) 
-
-platform.txt here contains entries required by the SPIFFS upload plugin. It searches for esptool command name only in selected board's folder.
-
-The esp8266 has too many Tools menu options and Sloeber doesn't remember them if hardware package is changed and takes some seconds to process the large boards.txt file of the esp8266 package every time I open project settings. So a smaller boards.txt with fixed settings I had always selected is convenient. 
-
-I have a Wemos D1 R2 wit 4MB flash and Wemos D1 mini clone with 1 MB flash. The official package contains only options for 4 MB flash so I copied the 1 MB flash options from the Generic section.
-
-I have a Grove UART WiFi module a simple module with Rx, TX pins only. Now it has a name in my boards menu. 
