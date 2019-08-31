@@ -102,7 +102,9 @@ static const uint8_t A7           = 31;
                                                         : (((p) <= 23)                  \
                                                                 ? ((p) - 22)            \
                                                                 : ((p) - 24)))))
-    
+
+#define digitalPinToInterrupt(p) ((p) == 2 ? 0 : ((p) == 3 ? 1 : ((p) == 8 ? 2 : NOT_AN_INTERRUPT)))
+
 #ifdef ARDUINO_MAIN
 
 /* These arrays map port names (e.g. port B) to the appropriate addresses for various
