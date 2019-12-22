@@ -1,0 +1,7 @@
+arduinoOTA104.name=Arduino OTA SAMD (192.168.1.104)
+arduinoOTA104.program.tool=arduinoOTA
+arduinoOTA104.ip=192.168.1.104
+
+arduinoOTA102.name=Arduino OTA SAMD (192.168.1.109)
+arduinoOTA102.program.tool=arduinoOTA
+arduinoOTA102.ip=192.168.1.109

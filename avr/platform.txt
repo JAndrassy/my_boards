@@ -5,3 +5,8 @@ recipe.objcopy.bin.pattern="{compiler.path}{compiler.elf2hex.cmd}" -O binary {co
 tools.avrdude.upload.network_pattern="{network_cmd}" -address {serial.port} -port 65280 -username arduino -password password -sketch "{build.path}/{build.project_name}.bin" -upload /sketch -b
 
 tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} {program.verify} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.with_bootloader.hex:i"
+
+tools.arduinoOTA.cmd={runtime.tools.arduinoOTA.path}/bin/arduinoOTA
+tools.arduinoOTA.program.params.verbose=
+tools.arduinoOTA.program.params.quiet=
+tools.arduinoOTA.program.pattern="{cmd}" -address {ip} -port 65280 -username arduino -password password -sketch "{build.path}/{build.project_name}.bin" -upload /sketch -b

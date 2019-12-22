@@ -5,7 +5,7 @@ This GitHub repository contains my settings for boards I use for my project and 
 
 ![folders](my_boards.png)
 
-All boards in this repo are only additions to installed 'official' board packages. My files contain only definition of the board in boards.txt, the folder in variants and platform.txt file contains only additional entries. I use Eclipse Arduino plugin named Sloeber for Arduino development. With Sloeber the entries from platform.txt in custom definition are merged with official platform.txt and my entries have priority. With Arduino IDE rename the platform.txt from my_boards to platform.local.txt and copy it next to platform.txt in the official board package.
+All boards in this repo are only additions to installed 'official' board packages. My files contain only definition of the board in boards.txt, the folder in variants and platform.txt file contains only additional entries. The file programmers.txt contains sample definitions of 'programmer' entries for OTA upload without the IDE detecting the network port.
 
 ## Boards
 
