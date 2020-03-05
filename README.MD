@@ -23,4 +23,6 @@ platform.txt contains an entry for remote upload, that is missing in the officia
 
 I use a M0 board without bootloader. The official core doesn't define a SAMD board without bootloader. The variants/arduino_mzero folder is copied from the Arduino SAMD package.
 
+### STM32 architecture
 
+boards.txt contains my combination of optional settings for Blue Pill board with 128kB flash and USB bootloader with the official STM32 Arduino boards package. 

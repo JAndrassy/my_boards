@@ -1,0 +1,24 @@
+
+
+BluePill128k.name=BluePill F103C8 (128k)
+
+BluePill128k.build.vid=0x0483
+BluePill128k.build.core=STM32:arduino
+BluePill128k.build.mcu=cortex-m3
+BluePill128k.build.series=STM32F1xx
+BluePill128k.build.board=BLUEPILL_F103C8
+BluePill128k.build.product_line=STM32F103xB
+BluePill128k.build.variant=STM32:PILL_F103XX
+BluePill128k.build.cmsis_lib_gcc=arm_cortexM3l_math
+BluePill128k.build.flash_offset=0x2000
+BluePill128k.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC
+BluePill128k.build.bootloader_flags=-DBL_LEGACY_LEAF -DVECT_TAB_OFFSET={build.flash_offset}
+BluePill128k.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} {build.bootloader_flags}
+
+BluePill128k.upload.maximum_size=131072
+BluePill128k.upload.maximum_data_size=20480
+BluePill128k.upload.protocol=maple
+BluePill128k.upload.tool=STM32:maple_upload
+BluePill128k.upload.usbID=1EAF:0003
+BluePill128k.upload.altID=2
+
