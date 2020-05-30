@@ -84,4 +84,27 @@ badio_sd.build.board=AVR_ATMEGA1284
 badio_sd.build.core=arduino:arduino
 badio_sd.build.variant=badio
 
+##############################################################
+
+uno_bob.name=Uno/Nano/Mini (Big Optiboot)
+
+uno_bob.upload.tool=arduino:avrdude
+uno_bob.upload.protocol=arduino
+uno_bob.upload.maximum_size=31745
+uno_bob.upload.maximum_data_size=2048
+uno_bob.upload.speed=115200
+
+uno_bob.bootloader.tool=arduino:avrdude
+uno_bob.bootloader.low_fuses=0xFF
+uno_bob.bootloader.high_fuses=0xDC
+uno_bob.bootloader.extended_fuses=0xFD
+uno_bob.bootloader.unlock_bits=0x3F
+uno_bob.bootloader.lock_bits=0x0F
+uno_bob.bootloader.file=optiboot8/optiboot_atmega328_big.hex
+
+uno_bob.build.mcu=atmega328p
+uno_bob.build.f_cpu=16000000L
+uno_bob.build.board=AVR_UNO
+uno_bob.build.core=arduino:arduino
+uno_bob.build.variant=arduino:standard
 
