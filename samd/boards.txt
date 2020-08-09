@@ -1,4 +1,43 @@
 
+# Arduino M0 with Arduino Zero bootloader
+# ----------------------------
+mzero_zero_bl.name=Arduino M0 (Zero bootloader)
+mzero_zero_bl.vid.0=0x2a03
+mzero_zero_bl.pid.0=0x004d
+mzero_zero_bl.vid.1=0x2a03
+mzero_zero_bl.pid.1=0x804d
+mzero_zero_bl.vid.2=0x2a03
+mzero_zero_bl.pid.2=0x004e
+mzero_zero_bl.vid.3=0x2a03
+mzero_zero_bl.pid.3=0x804e
+
+mzero_zero_bl.upload.tool=arduino:bossac
+mzero_zero_bl.upload.protocol=sam-ba
+mzero_zero_bl.upload.maximum_size=262144
+mzero_zero_bl.upload.use_1200bps_touch=true
+mzero_zero_bl.upload.wait_for_upload_port=true
+mzero_zero_bl.upload.native_usb=true
+mzero_zero_bl.build.mcu=cortex-m0plus
+mzero_zero_bl.build.f_cpu=48000000L
+mzero_zero_bl.build.usb_product="Arduino M0"
+mzero_zero_bl.build.usb_manufacturer="Arduino LLC"
+mzero_zero_bl.build.board=SAMD_ZERO
+mzero_zero_bl.build.core=arduino:arduino
+mzero_zero_bl.build.extra_flags=-D__SAMD21G18A__ -mthumb {build.usb_flags}
+mzero_zero_bl.build.ldscript=linker_scripts/gcc/flash_with_zero_bootloader.ld
+mzero_zero_bl.build.openocdscript=openocd_scripts/arduino_zero.cfg
+mzero_zero_bl.build.variant=arduino_mzero
+mzero_zero_bl.build.variant_system_lib=
+mzero_zero_bl.build.vid=0x2a03
+mzero_zero_bl.build.pid=0x804e
+#mzero_zero_bl.bootloader.tool=arduino:openocd
+#mzero_zero_bl.bootloader.file=zero/samd21_sam_ba.bin
+
+#for debugger
+#mzero_zero_bl.compiler.c.flags=-mcpu={build.mcu} -mthumb -c -g -Og {compiler.warning_flags} -std=gnu11 -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -MMD -DDEBUG
+#mzero_zero_bl.compiler.cpp.flags=-mcpu={build.mcu} -mthumb -c -g -Og {compiler.warning_flags} -std=gnu++11 -ffunction-sections -fdata-sections -fno-threadsafe-statics -nostdlib --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -MMD -DDEBUG
+#mzero_zero_bl.compiler.elf2hex.flags=--debugging -O binary
+
 # Arduino M0 without bootloader
 # ----------------------------
 mzero_no_bl.name=Arduino M0 (no bootloader)

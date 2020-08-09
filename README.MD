@@ -21,7 +21,11 @@ I have [a small series ATmega1284p board](https://github.com/budvar10/Arduino-AT
 
 platform.txt contains an entry for remote upload, that is missing in the official package.
 
-I use a M0 board without bootloader. The official core doesn't define a SAMD board without bootloader. The variants/arduino_mzero folder is copied from the Arduino SAMD package.
+I use a M0 board without bootloader. The official core doesn't define a SAMD board without bootloader. 
+
+The Arduino Zero bootloader is much better then the arduino.org M0 bootloader. Board definition "Arduino M0 (Zero bootloader)" has M0 pin defintions, but samba upload definitions for Zero bootloader. Burn the bootloader with Zero selected in the Arduino boards package. 
+
+The variants/arduino_mzero folder is copied from the Arduino SAMD package, but my M0 doesn't have the EDGB programmer chip so I removed the SERCOM configuration for Serial (over EDBG) and aliased Serial to SerialUSB, so I can use Serial in all sketches and libraries.
 
 ### STM32 architecture
 
