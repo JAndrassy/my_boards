@@ -1,8 +1,7 @@
 
 
-BluePill128k.name=BluePill F103C8 (128k)
+BluePill128k.name=BluePill F103C8 (128k) USB
 
-BluePill128k.build.vid=0x0483
 BluePill128k.build.core=STM32:arduino
 BluePill128k.build.mcu=cortex-m3
 BluePill128k.build.series=STM32F1xx
