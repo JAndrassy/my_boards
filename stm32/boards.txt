@@ -2,6 +2,7 @@
 
 BluePill128k.name=BluePill F103C8 (128k) USB
 
+BluePill128k.build.vid=0x0483
 BluePill128k.build.core=STM32:arduino
 BluePill128k.build.mcu=cortex-m3
 BluePill128k.build.series=STM32F1xx
@@ -21,3 +22,30 @@ BluePill128k.upload.tool=STM32:maple_upload
 BluePill128k.upload.usbID=1EAF:0003
 BluePill128k.upload.altID=2
 
+#########################################################
+BluePill128kswd.name=BluePill F103C8 (128k) SWD
+
+BluePill128kswd.build.vid=0x0483
+BluePill128kswd.build.core=STM32:arduino
+BluePill128kswd.build.mcu=cortex-m3
+BluePill128kswd.build.series=STM32F1xx
+BluePill128kswd.build.board=BLUEPILL_F103C8
+BluePill128kswd.build.product_line=STM32F103xB
+BluePill128kswd.build.variant=STM32:PILL_F103XX
+BluePill128kswd.build.cmsis_lib_gcc=arm_cortexM3l_math
+BluePill128kswd.build.flash_offset=0x2000
+#BluePill128kswd.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC
+BluePill128kswd.build.bootloader_flags=-DBL_LEGACY_LEAF -DVECT_TAB_OFFSET={build.flash_offset}
+BluePill128kswd.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} {build.bootloader_flags}
+
+BluePill128kswd.upload.maximum_size=131072
+BluePill128kswd.upload.maximum_data_size=20480
+BluePill128kswd.upload.tool=STM32:stm32CubeProg
+BluePill128kswd.upload.protocol=0
+BluePill128kswd.upload.options=-g
+
+#for debugger
+BluePill128kswd.build.flags.optimize=-g -Og
+BluePill128kswd.compiler.c.extra_flags=-DDEBUG
+BluePill128kswd.compiler.cpp.extra_flags=-DDEBUG
+BluePill128kswd.compiler.elf2hex.extra_flags=--debugging

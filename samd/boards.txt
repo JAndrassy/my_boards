@@ -34,9 +34,9 @@ mzero_zero_bl.build.pid=0x804e
 #mzero_zero_bl.bootloader.file=zero/samd21_sam_ba.bin
 
 #for debugger
-#mzero_zero_bl.compiler.c.flags=-mcpu={build.mcu} -mthumb -c -g -Og {compiler.warning_flags} -std=gnu11 -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -MMD -DDEBUG
-#mzero_zero_bl.compiler.cpp.flags=-mcpu={build.mcu} -mthumb -c -g -Og {compiler.warning_flags} -std=gnu++11 -ffunction-sections -fdata-sections -fno-threadsafe-statics -nostdlib --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -MMD -DDEBUG
-#mzero_zero_bl.compiler.elf2hex.flags=--debugging -O binary
+#mzero_zero_bl.compiler.c.extra_flags=-DDEBUG
+#mzero_zero_bl.compiler.cpp.extra_flags=-DDEBUG
+#mzero_zero_bl.compiler.elf2hex.extra_flags=--debugging
 
 # Arduino M0 without bootloader
 # ----------------------------
@@ -69,7 +69,7 @@ mzero_no_bl.build.vid=0x2a03
 mzero_no_bl.build.pid=0x804e
 
 #for debugger
-#mzero_no_bl.compiler.c.flags=-mcpu={build.mcu} -mthumb -c -g -Og {compiler.warning_flags} -std=gnu11 -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -MMD -DDEBUG
-#mzero_no_bl.compiler.cpp.flags=-mcpu={build.mcu} -mthumb -c -g -Og {compiler.warning_flags} -std=gnu++11 -ffunction-sections -fdata-sections -fno-threadsafe-statics -nostdlib --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -MMD -DDEBUG
-#mzero_no_bl.compiler.elf2hex.flags=--debugging -O binary
+#mzero_no_bl.compiler.c.extra_flags=-DDEBUG
+#mzero_no_bl.compiler.cpp.extra_flags=-DDEBUG
+#mzero_no_bl.compiler.elf2hex.extra_flags=--debugging
 
