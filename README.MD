@@ -1,5 +1,5 @@
 
-Arduino IDE and Arduino builder support custom board definitions from [hardware subfolder](https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5-3rd-party-Hardware-specification) of your sketches folder. This definitions can use core classes and tools from installed board packages.
+Arduino IDE and Arduino builder support custom board definitions from [hardware subfolder](https://arduino.github.io/arduino-cli/platform-specification/) of your sketches folder. This definitions can use core classes and tools from installed board packages.
 
 This GitHub repository contains my settings for boards I use for my project and to develop Arduino libraries. You can use it as starting point for your boards specialties.
 
@@ -21,12 +21,14 @@ I have [a small series ATmega1284p board](https://github.com/budvar10/Arduino-AT
 
 platform.txt contains an entry for remote upload, that is missing in the official package.
 
-I use a M0 board without bootloader. The official core doesn't define a SAMD board without bootloader. 
-
-The Arduino Zero bootloader is much better then the arduino.org M0 bootloader. Board definition "Arduino M0 (Zero bootloader)" has M0 pin defintions, but samba upload definitions for Zero bootloader. Burn the bootloader with Zero selected in the Arduino boards package. 
+The Arduino Zero bootloader is much better then the arduino.org M0 bootloader. Board definition "Arduino M0 (Zero bootloader)" has M0 pin definitions, but samba upload definitions for Zero bootloader. Burn the bootloader with Zero selected in the Arduino boards package. 
 
 The variants/arduino_mzero folder is copied from the Arduino SAMD package, but my M0 doesn't have the EDGB programmer chip so I removed the SERCOM configuration for Serial (over EDBG) and aliased Serial to SerialUSB, so I can use Serial in all sketches and libraries.
 
 ### STM32 architecture
 
-boards.txt contains my combination of optional settings for Blue Pill board with 128kB flash and USB bootloader with the official STM32 Arduino boards package. 
+boards.txt contains my combinations of optional settings for Blue Pill board with 128kB flash with the official STM32 Arduino boards package.
+
+### nRF5 architecture
+
+I have a Seeed Arch Link nRF51 board, which is not yet in Sandeep Mistry's Nordic Semiconductor nRF5 Boards release.
