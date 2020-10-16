@@ -1,5 +1,5 @@
 
-Arduino IDE and Arduino builder support custom board definitions from [hardware subfolder](https://arduino.github.io/arduino-cli/platform-specification/) of your sketches folder. This definitions can use core classes and tools from installed board packages.
+Arduino IDE and Arduino builder support custom board definitions from [hardware subfolder](https://arduino.github.io/arduino-cli/platform-specification/) of your sketches folder. These definitions can use core classes and tools from installed board packages.
 
 This GitHub repository contains my settings for boards I use for my project and to develop Arduino libraries. You can use it as starting point for your boards specialties.
 
