@@ -203,6 +203,7 @@ extern Uart Serial1;
 
 // J.A with no EDBG Serial, we can use Serial for SerialUSB
 #define Serial   SerialUSB
+#define SerialNina   Serial1
 
 #endif /* _VARIANT_ARDUINO_ZERO_ */
 
