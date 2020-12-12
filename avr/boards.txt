@@ -65,10 +65,10 @@ badio.build.variant=badio
 badio_sd.name=Badio 1284p (SD boot)
 
 badio_sd.upload.tool=arduino:avrdude
-badio_sd.upload.protocol=arduino
+badio_sd.upload.protocol=stk500
 badio_sd.upload.maximum_size=126976
 badio_sd.upload.maximum_data_size=16384
-badio_sd.upload.speed=19200
+badio_sd.upload.speed=38400
 
 badio_sd.bootloader.tool=arduino:avrdude
 badio_sd.bootloader.low_fuses=0xF7
@@ -76,9 +76,10 @@ badio_sd.bootloader.high_fuses=0xDA
 badio_sd.bootloader.extended_fuses=0xfd
 badio_sd.bootloader.unlock_bits=0x3f
 badio_sd.bootloader.lock_bits=0x0f
-badio_sd.bootloader.file=sd_boot/sd_boot_badio_w_eth_shield.hex
+#badio_sd.bootloader.file=sd_boot/sd_boot_badio_w_eth_shield.hex
+badio_sd.bootloader.file=sd_boot/sd_boot_badio_sd10_etha5.hex
 
-badio_sd.build.mcu=atmega1284
+badio_sd.build.mcu=atmega1284p
 badio_sd.build.f_cpu=16000000L
 badio_sd.build.board=AVR_ATMEGA1284
 badio_sd.build.core=arduino:arduino
