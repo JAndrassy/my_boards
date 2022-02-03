@@ -1,3 +1,4 @@
+<a href="https://www.buymeacoffee.com/jurajandraY" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 Arduino IDE and Arduino builder support custom board definitions from [hardware subfolder](https://arduino.github.io/arduino-cli/platform-specification/) of your sketches folder. These definitions can use core classes and tools from installed board packages.
 
