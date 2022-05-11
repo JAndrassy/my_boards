@@ -17,6 +17,7 @@ mega.vid.5=0x2341
 mega.pid.5=0x0242
 
 mega.upload.tool=arduino:avrdude
+mega.upload.tool.network=arduino_ota
 mega.upload.protocol=arduino
 mega.upload.maximum_size=261120
 mega.upload.maximum_data_size=8192

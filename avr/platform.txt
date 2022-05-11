@@ -8,10 +8,19 @@ build.preferred_out_format=bin
 recipe.output.tmp_file={build.project_name}.{build.preferred_out_format}
 recipe.output.save_file={build.project_name}.{build.variant}.{build.preferred_out_format}
 
+#IDE 1
+tools.avrdude.network_cmd={runtime.hardware.path}/tools/arduinoOTA
 tools.avrdude.upload.network_pattern="{network_cmd}" -address {serial.port} -port 65280 -username arduino -password password -sketch "{build.path}/{build.project_name}.bin" -upload /sketch -b
 
 tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} {program.verify} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.with_bootloader.hex:i"
 
+#IDE 2
+tools.arduino_ota.cmd={runtime.tools.arduinoOTA.path}/bin/arduinoOTA
+tools.arduino_ota.upload.field.password=Password
+tools.arduino_ota.upload.field.password.secret=true
+tools.arduino_ota.upload.pattern="{cmd}" -address {serial.port} -port 65280 -username arduino -password "{upload.field.password}" -sketch "{build.path}/{build.project_name}.bin" -upload /sketch -b
+
+#fake programmer
 tools.arduinoOTA.cmd={runtime.hardware.path}/tools/arduinoOTA
 tools.arduinoOTA.cmd.windows={runtime.hardware.path}/tools/arduinoOTA.exe
 tools.arduinoOTA.program.params.verbose=
