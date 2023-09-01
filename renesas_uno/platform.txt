@@ -1,0 +1,4 @@
+
+#patch
+tinyusb.includes="-I{build.core.path}/tinyusb"
+
